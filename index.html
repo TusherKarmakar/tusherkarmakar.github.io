@@ -7,10 +7,10 @@
   <style>
     body {
       font-family: Georgia, "Times New Roman", Times, serif;
-      max-width: 760px;
+      max-width: 860px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.6;
+      line-height: 1.7;
       color: #111;
       background: #fff;
       font-size: 18px;
@@ -32,7 +32,9 @@
     }
 
     .nav {
-      margin-bottom: 28px;
+      margin-bottom: 30px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ddd;
     }
 
     .nav a {
@@ -40,9 +42,51 @@
       white-space: nowrap;
     }
 
-    .content {
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 36px;
       margin-top: 10px;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
+    }
+
+    .hero-text {
+      flex: 1 1 65%;
+      min-width: 0;
+    }
+
+    .hero-photo {
+      flex: 0 0 220px;
+      text-align: right;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      margin-left: auto;
+    }
+
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: normal;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+
+    .education-entry {
+      margin-bottom: 18px;
+    }
+
+    .degree {
+      font-weight: bold;
+    }
+
+    .school {
+      font-style: italic;
     }
 
     .footer-title {
@@ -61,7 +105,7 @@
       margin-bottom: 6px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       body {
         margin: 24px auto;
         font-size: 17px;
@@ -76,6 +120,21 @@
         margin-right: 12px;
         margin-bottom: 8px;
       }
+
+      .hero {
+        flex-direction: column-reverse;
+        gap: 20px;
+      }
+
+      .hero-photo {
+        text-align: left;
+        flex: none;
+      }
+
+      .hero-photo img {
+        margin-left: 0;
+        max-width: 180px;
+      }
     }
   </style>
 </head>
@@ -89,62 +148,66 @@
     <a href="publications.html">Publications</a>
     <a href="research.html">Research</a>
     <a href="teaching.html">Teaching</a>
+    <a href="#education">Education</a>
     <a href="notes.html">Notes</a>
     <a href="blog.html">Blog</a>
+    <a href="Resume_Tusher_Karmakar.pdf" target="_blank">CV</a>
   </div>
 
-<div class="content" style="display: flex; align-items: flex-start; gap: 30px;">
+  <div class="hero">
+    <div class="hero-text">
+      <p>Welcome to my website.</p>
 
-  <!-- LEFT: TEXT -->
-  <div style="flex: 2;">
+      <p>
+        I am a Ph.D. student in Electrical and Computer Engineering at
+        <a href="https://www.iastate.edu/">Iowa State University</a>,
+        advised by Prof. Namrata Vaswani.
+      </p>
 
-    <p>Welcome to my website.</p>
+      <p>
+        My research interests include matrix factorization, machine learning,
+        signal processing, data privacy, low-rank recovery, and robust data analysis.
+      </p>
 
-    <p>
-      I am a Ph.D. student in Electrical and Computer Engineering at
-      <a href="https://www.iastate.edu/">Iowa State University</a>,
-      advised by Prof. Namrata Vaswani.
-    </p>
+      <p>
+        Before joining Iowa State University, I completed my B.Sc. in Electrical
+        and Electronic Engineering at Bangladesh University of Engineering and Technology (BUET).
+      </p>
 
-    <p>
-      My research interests include matrix factorization, machine learning,
-      signal processing, data privacy, low-rank recovery, and robust data analysis.
-    </p>
+      <p>
+        Please visit the other pages to learn more about my research, publications,
+        teaching, and academic work.
+      </p>
+    </div>
 
-    <p>
-      Before joining Iowa State University, I completed my B.Sc. in Electrical
-      and Electronic Engineering at Bangladesh University of Engineering and Technology (BUET).
-    </p>
-
-    <!-- CV BUTTON -->
-    <p>
-      📄 
-      <a href="Resume_Tusher_Karmakar.pdf" target="_blank">
-        <strong>Download CV</strong>
-      </a>
-    </p>
-
+    <div class="hero-photo">
+      <img src="profile.jpg" alt="Tusher Karmakar">
+    </div>
   </div>
 
-  <!-- RIGHT: PHOTO -->
-  <div style="flex: 1; text-align: center;">
-    <img src="profile.jpg" alt="Tusher Karmakar"
-         style="width: 180px; border-radius: 10px;">
-  </div>
+  <div id="education">
+    <div class="section-title">Education</div>
 
-</div>
-  <!-- RIGHT: PHOTO -->
-  <div style="flex: 1; text-align: center;">
-    <img src="profile.jpg" alt="Tusher Karmakar"
-         style="width: 180px; border-radius: 10px;">
-  </div>
+    <div class="education-entry">
+      <div class="degree">Ph.D. in Electrical and Computer Engineering</div>
+      <div class="school">Iowa State University, Ames, Iowa, USA</div>
+      <div>Aug 2025 – Present</div>
+      <div>Advisor: Prof. Namrata Vaswani</div>
+    </div>
 
-</div>
+    <div class="education-entry">
+      <div class="degree">B.Sc. in Electrical and Electronic Engineering</div>
+      <div class="school">Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh</div>
+      <div>2019 – 2024</div>
+      <div>Major: Communication and Signal Processing</div>
+      <div>CGPA: 3.63/4.00</div>
+    </div>
+  </div>
 
   <div class="footer-title">Tusher Karmakar</div>
   <ul class="contact">
     <li>Ph.D. Student, Electrical and Computer Engineering, Iowa State University</li>
-    <li>karmakartusher24@gmail.com</li>
+    <li><a href="mailto:karmakartusher24@gmail.com">karmakartusher24@gmail.com</a></li>
     <li><a href="https://github.com/TusherKarmakar">GitHub</a></li>
     <li><a href="#">Google Scholar</a></li>
   </ul>
