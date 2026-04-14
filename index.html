@@ -11,7 +11,6 @@
       --muted: #555;
       --line: #d9d9d9;
       --link: #0b57d0;
-      --bg: #ffffff;
     }
 
     body {
@@ -21,7 +20,6 @@
       padding: 0 24px;
       line-height: 1.8;
       color: var(--text);
-      background: var(--bg);
       font-size: 19px;
     }
 
@@ -34,20 +32,13 @@
       text-decoration: underline;
     }
 
-    .site-header {
-      margin-bottom: 28px;
-    }
-
     .site-title {
       font-size: 2.5rem;
-      font-weight: normal;
-      margin: 0 0 10px 0;
-      letter-spacing: 0.2px;
+      margin-bottom: 8px;
     }
 
     .site-subtitle {
       color: var(--muted);
-      font-size: 1rem;
       margin-bottom: 18px;
     }
 
@@ -55,101 +46,42 @@
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
       padding: 12px 0;
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
 
     .nav a {
-      display: inline-block;
-      margin-right: 22px;
+      margin-right: 20px;
       color: var(--text);
-      font-size: 1rem;
-    }
-
-    .nav a:hover {
-      color: var(--link);
-      text-decoration: none;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 330px;
-      gap: 48px;
+      grid-template-columns: 1fr 360px;
+      gap: 50px;
       align-items: start;
-      margin-bottom: 52px;
     }
 
     .hero-text p {
-      margin: 0 0 18px 0;
-    }
-
-    .hero-text .lead {
-      font-size: 1.08rem;
-    }
-
-    .hero-photo {
-      text-align: right;
+      margin-bottom: 18px;
     }
 
     .hero-photo img {
       width: 100%;
-      max-width: 330px;
-      height: auto;
+      max-width: 360px;
       border-radius: 12px;
       display: block;
       margin-left: auto;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
-    .quick-links {
+    .hero-contact {
       margin-top: 18px;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
-    .quick-links a {
-      margin-right: 16px;
-    }
-
-    .section {
-      margin-top: 26px;
-      margin-bottom: 32px;
-    }
-
-    .section-title {
-      font-size: 1.35rem;
-      font-weight: normal;
-      margin: 0 0 14px 0;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .news-list {
-      margin: 0;
-      padding-left: 22px;
-    }
-
-    .news-list li {
-      margin-bottom: 10px;
-    }
-
-    .footer {
-      margin-top: 56px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-    }
-
-    .footer-title {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      margin: 0;
-      padding-left: 22px;
-    }
-
-    .contact li {
-      margin-bottom: 8px;
-      color: var(--text);
+    .hero-contact li {
+      list-style: none;
+      margin-bottom: 6px;
     }
 
     .muted {
@@ -159,123 +91,83 @@
     @media (max-width: 850px) {
       body {
         font-size: 17px;
-        margin-top: 24px;
-      }
-
-      .site-title {
-        font-size: 2rem;
       }
 
       .hero {
         grid-template-columns: 1fr;
-        gap: 26px;
-      }
-
-      .hero-photo {
-        text-align: left;
       }
 
       .hero-photo img {
         max-width: 240px;
         margin-left: 0;
       }
-
-      .nav a {
-        margin-right: 14px;
-        margin-bottom: 6px;
-      }
     }
   </style>
 </head>
+
 <body>
 
-  <header class="site-header">
-    <h1 class="site-title"><a href="index.html" style="color: inherit; text-decoration: none;">Tusher Karmakar</a></h1>
-    <div class="site-subtitle">Ph.D. Student, Electrical and Computer Engineering, Iowa State University</div>
+  <h1 class="site-title">Tusher Karmakar</h1>
+  <div class="site-subtitle">Ph.D. Student, Electrical and Computer Engineering, Iowa State University</div>
 
-    <nav class="nav">
-      <a href="publications.html">Publications</a>
-      <a href="research.html">Research</a>
-      <a href="projects.html">Projects</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="education.html">Education</a>
-      <a href="notes.html">Notes</a>
-      <a href="blog.html">Blog</a>
-      <a href="Resume.pdf" target="_blank">CV</a>
-    </nav>
-  </header>
+  <div class="nav">
+    <a href="publications.html">Publications</a>
+    <a href="research.html">Research</a>
+    <a href="projects.html">Projects</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="education.html">Education</a>
+    <a href="notes.html">Notes</a>
+    <a href="blog.html">Blog</a>
+    <a href="Resume.pdf" target="_blank">CV</a>
+  </div>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <p class="lead">
-          Welcome to my website.
-        </p>
+  <div class="hero">
 
-        <p>
-          I am a Ph.D. student in Electrical and Computer Engineering at
-          <a href="https://www.iastate.edu/" target="_blank">Iowa State University</a>,
-          advised by Prof. Namrata Vaswani.
-        </p>
+    <!-- LEFT -->
+    <div class="hero-text">
 
-        <p>
-          My research interests include matrix factorization, machine learning,
-          signal processing, data privacy, low-rank recovery, and robust data analysis.
-        </p>
+      <p><strong>Welcome to my website.</strong></p>
 
-        <p>
-          <p>
-  Before joining Iowa State University, I completed my B.Sc. in Electrical
-  and Electronic Engineering at Bangladesh University of Engineering and Technology (BUET),
-  where I worked on my undergraduate thesis under the supervision of Prof. Hafiz Imtiaz.
-</p>
-        </p>
+      <p>
+        I am a Ph.D. student in Electrical and Computer Engineering at
+        <a href="https://www.iastate.edu/" target="_blank">Iowa State University</a>,
+        advised by Prof. Namrata Vaswani.
+      </p>
 
-        <p>
-          This website contains information about my research, publications,
-          projects, teaching, and academic background.
-        </p>
+      <p>
+        My research interests include matrix factorization, machine learning,
+        signal processing, data privacy, low-rank recovery, and robust data analysis.
+      </p>
 
-        <div class="quick-links">
-          <a href="research.html">Research</a>
-          <a href="publications.html">Publications</a>
-          <a href="Resume.pdf" target="_blank">CV</a>
-        </div>
-      </div>
+      <p>
+        Before joining Iowa State University, I completed my B.Sc. in Electrical
+        and Electronic Engineering at Bangladesh University of Engineering and Technology (BUET),
+        where I worked on my undergraduate thesis under the supervision of
+        <strong>Prof. Hafiz Imtiaz</strong>.
+      </p>
 
+      <p>
+        This website contains information about my research, publications,
+        projects, teaching, and academic background.
+      </p>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div>
       <div class="hero-photo">
         <img src="profile.jpg" alt="Tusher Karmakar">
       </div>
-    </section>
 
-    <section class="section">
-      <h2 class="section-title">About</h2>
-      <p>
-        My work broadly lies at the intersection of machine learning, signal processing,
-        optimization, and matrix factorization. I am especially interested in methods for
-        low-rank structure, privacy-preserving computation, and robust data modeling.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Updates</h2>
-      <ul class="news-list">
-        <li>Joined Iowa State University as a Ph.D. student in Electrical and Computer Engineering.</li>
-        <li>Working on research problems in matrix factorization, low-rank recovery, and data privacy.</li>
-        <li>Serving as a teaching assistant in the Department of Electrical and Computer Engineering.</li>
+      <ul class="hero-contact">
+        <li>📧 <a href="mailto:karmakartusher24@gmail.com">karmakartusher24@gmail.com</a></li>
+        <li>💻 <a href="https://github.com/TusherKarmakar" target="_blank">GitHub</a></li>
+        <li>🎓 <a href="https://scholar.google.com/citations?user=_4frHTIAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+        <li class="muted">Ames, Iowa, USA</li>
       </ul>
-    </section>
-  </main>
+    </div>
 
-  <footer class="footer">
-    <div class="footer-title">Contact</div>
-    <ul class="contact">
-      <li>📧 <a href="mailto:karmakartusher24@gmail.com">karmakartusher24@gmail.com</a></li>
-      <li>💻 <a href="https://github.com/TusherKarmakar" target="_blank">GitHub</a></li>
-      <li>🎓 <a href="https://scholar.google.com/citations?user=_4frHTIAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-      <li class="muted">Ames, Iowa, USA</li>
-    </ul>
-  </footer>
+  </div>
 
 </body>
 </html>
